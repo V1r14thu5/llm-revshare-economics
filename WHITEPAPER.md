@@ -1,78 +1,111 @@
-# Why Stochastic Reasoning Makes Revshare the Only Economically Compatible Model for LLMs  
-### A Data-Driven Revenue Hypothesis for OpenAI  
-**Author:** Nuno Lopes BSc.  
-**Paper Type:** Economic hypothesis · Agentic commerce · LLM incentives  
+
+→ enough to materially hedge current inference burn.
+
+Critically:
+
+> Conversion collapses if reasoning quality is bad → making reasoning the asset, not the side-effect.
 
 ---
 
-## Executive Summary
+## 6. Fairness and Incentive Design
 
-For twenty years → the internet has monetised **attention** through advertising auctions.  
-Google and Meta perfected engagement and bid optimisation, creating trillion-dollar platforms.  
+### 6.1. Allocation logic
 
-But **LLMs monetise intent, not attention.**  
-Their core value → lies in **stochastic, context-sensitive reasoning → over long interactions** that resolve real constraints and soft user preferences.
+| Model | Allocation |
+|---|---|
+| PPC | visibility via capital bidding |
+| Revshare | income via semantic fit and reasoning success |
 
-This paper hypothesises that:
+### 6.2. Small business advantage
 
-> **Outcome-based revenue sharing (Revshare) is the only monetisation model compatible with frontier LLM reasoning at scale.**
+Under PPC:
 
-### Supporting evidence:
-- OpenAI annualised revenue by mid-2025: **USD 10–13B**, up from 2–4B in 2023–24  
-- 2025 inference spend through Q3 2025 already: **USD 8.6B+**  
-- Google 2025 Avg. CPC: **USD 5.26**, Avg CPL: **USD 70.11**, trending upward  
-- Global 2025 advertising spend: **USD 1T+**, digital majority  
-- Estimated gross profit per high-intent AI commerce session: **USD ~3.73**
+- Must bid against global brands at US$3–6 CPCs
 
-### Key implications:
-- PPC corrupts reasoning by injecting **bid-based bias**
-- Revshare pays **only on real outcomes**, strengthening reasoning incentives
-- Even small merchants can compete → as ranking shifts from capital to semantic fit
+Under revshare:
 
-At scale of ~100M high-intent commercial sessions per month:
+- Expose product data → compete by fit, reviews, stock, shipping
+- **No upfront ad budget needed**
+- Visibility becomes **merit-allocated, not capital-allocated**
 
-> **Annual gross profit opportunity ≈ USD 4.4–5B**, materially offsetting inference burn.
+### 6.3. Incentive for reasoning quality
 
-Final conclusion:
+Revshare optimises for:
 
-**Search monetises fragments of intent.  
+- Clarification → not premature suggestion
+- Fit → not bidder power
+- Learning rewarded via reinforcement → linked to outcomes → not clicks
+- Returns avoided → long-term satisfaction increased
+
+Meaning:
+
+> Stochastic reasoning becomes the **monetised flywheel — not the expense sink**.
+
+---
+
+## 7. OpenAI Burn → Economics of Intelligence CapEx
+
+- Training runs ≈ CapEx on intelligence asset
+- Inference = variable cost → unit price declining over time due to:
+  - Hardware improvements
+  - Software optimisation
+  - Architectural efficiency
+
+Thus:
+
+> Revshare is a **margin-expanding economic call option on AI-mediated GMV**.
+
+---
+
+## 8. Forecast → From Ads to Agentic Marketplaces
+
+### 8.1. Macro spend environment
+
+- 2025 Global ad-spend ≈ US$1T+
+- 2030 Pre-AI forecasts ≈ US$1.5T digital ads/marketing
+- 2029 Entertainment/media ≈ US$3.5T
+
+### 8.2. Expansion + substitution
+
+- Agents compress funnels, generate new demand
+- Agents unlock long-tail supply
+- Even 5–10% capture of global e-commerce/services GMV → massive implied revenue pool
+- 10–15% revshare at capture layer → rivals current PPC scale
+
+Meaning:
+
+> The discovery layer monetises reasoning and satisfaction → not bidder capital.
+
+---
+
+## 9. Final Conclusion
+
+> **Search monetises intent fragments.  
 LLMs monetise reasoning chains.  
-Only revshare respects and scales with that difference.**
+The only sustainable monetisation layer for stochastic reasoning at scale is Revshare.**
 
----
+Revshare:
 
-## Core Thesis Breakdown
-
-### 1. Stochastic reasoning evaluates:
-- Hard constraints (budget, delivery, dimensions, stock)
-- Soft preferences (risk, style, trust, social proof)
-- Implicit option ranking in embedding space
-
-### 2. Ad auctions introduce:
-- Bid-based option distortion
-- Loss of user trust
-- Noisy training signals
-- Lower long-term conversion
-
-### 3. Revshare introduces:
-- Pay-on-success dynamics
-- Incentives for better reasoning chains
-- No upfront merchant cost
-- Merit-based visibility
-- Reinforcement-aligned optimisation
-
----
-
-## Conclusion
-
-Revshare transforms LLM reasoning from a **cost centre** to a **monetised economic substrate**.  
-Over time → declining inference cost per session creates a **margin-expanding flywheel**.
-
-> **The next era of the internet monetises outcomes → not attention.  
-LLMs are the infrastructure of intent → not engagement.**
+- Reinforces reasoning quality
+- Hedges inference burn
+- Removes merchant capital requirement for visibility
+- Scales without corrupting the LLM asset users trust most → the reasoning chain itself
 
 ---
 
 ## References
 
-*(Sources are listed in the `/paper` section and included verbatim for academic formats.)*
+Cottier, M. et al. (2024) *The rising costs of training frontier AI models*, arXiv.  
+Epoch (2025a) *OpenAI revenue grew 3x a year since 2024*, Epoch AI.  
+Epoch (2025b) *Most 2024 compute went to experiments*, Epoch AI.  
+Entrepreneur (2025) *OpenAI saw more revenue in 6 months than all of 2024*, Entrepreneur.  
+Financial Times (2025) *OpenAI compute costs leaked*, FT.  
+GlobeNewswire (2023) *Digital Ads/Marketing to reach 1.5T by 2030*, GlobeNewswire.  
+LocaliQ (2025) *Search Advertising Benchmarks 2025*, LocaliQ.  
+Reuters (2025) *OpenAI annualised revenue hits 10B*, Reuters.  
+StoreGrowers (2025) *Google Ads Benchmarks 2025*, StoreGrowers.  
+The Register (2025) *OpenAI spent 12B on Microsoft inference*, The Register.  
+WARC (2025) *Global ad spend passes 1T*, WARC.  
+WordStream (2025a) *Google Ads Benchmarks 2025*, WordStream.  
+WordStream (2025b) *Google Ads Costs 2025*, WordStream.  
+eMarketer (2025) *Worldwide Ad Spend 2025 forecast*, eMarketer.
