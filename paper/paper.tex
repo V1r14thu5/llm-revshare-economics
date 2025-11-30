@@ -1,12 +1,396 @@
-\documentclass[11pt]{article}
+\documentclass[11pt,a4paper]{article}
 \usepackage{amsmath}
 \usepackage{graphicx}
 \usepackage{hyperref}
+\usepackage[margin=1in]{geometry}
+\usepackage{enumitem}
+
 \title{Why Stochastic Reasoning Makes Revshare the Only Economically Compatible Model for LLMs}
 \author{Nuno Lopes BSc.}
 \date{}
+
 \begin{document}
 \maketitle
-\section{Executive Summary}
-% Full text goes here
+
+\begin{center}
+A Data-Driven Revenue Hypothesis for OpenAI\\
+\textbf{By Nuno Lopes BSc.}
+\end{center}
+
+\section*{Executive Summary}
+
+The internet’s dominant business model has, for two decades, been built on advertising, attention and hope. Advertisers buy clicks in the hope that some proportion will convert. Platforms optimise auctions and engagement. Users pay indirectly, with time and data. This structure created trillion-dollar companies → but the model is now showing structural strain: rising customer acquisition costs (CAC), increasing auction complexity, and diminishing returns for smaller businesses.
+
+Large language models (LLMs) such as OpenAI’s models are entirely different economic objects. They engage in stochastic reasoning over long context windows, gather rich detail about users’ intentions, and can execute complex, multi-step tasks. This architecture is fundamentally mis-aligned with ad auctions, which reward bidding power rather than reasoning quality.
+
+This paper develops a data-driven hypothesis:
+
+\begin{quote}
+\textbf{Outcome-based revenue sharing (revshare) is the only monetisation model that is economically compatible with frontier LLMs at scale.}
+\end{quote}
+
+Using recent estimates of OpenAI’s revenue and compute costs, alongside benchmarks from Google Ads and global ad-spend forecasts, the paper argues that:
+
+\begin{itemize}[leftmargin=*]
+\item OpenAI has reached an annualised revenue run-rate of around \textbf{US\$10–13 billion by mid-2025}, up from \textbf{US\$2–4 billion in 2023–24} (Reuters, 2025; Entrepreneur, 2025).
+\item Compute costs are extraordinary → \textbf{Azure inference cumulative spend likely >US\$12B since 2024}, with \textbf{2025 inference YTD already >US\$8.6B} (Financial Times, 2025; The Register, 2025; Epoch, 2025b).
+\item Google Ads 2025 benchmarks show \textbf{Avg CPC ~US\$5.26 and Avg CPL ~US\$70}, trending upward especially for SMEs (WordStream, 2025b; LocaliQ, 2025).
+\item Global advertising forecasts \textbf{>US\$1 trillion in 2025}, digital now majority, accelerating toward 2030 dominance (WARC, 2025; eMarketer, 2025).
+\end{itemize}
+
+Against this macroeconomic backdrop, the paper models revshare economics at the level of a single commercial conversation and shows that:
+
+\begin{itemize}[leftmargin=*]
+\item A high-intent, multi-turn AI-mediated session can generate \textbf{US\$3–4 of gross profit per successful conversation} under plausible assumptions.
+\item At only \textbf{100 million high-intent sessions per month → US\$4–5 billion per year in gross profit opportunity}, enough to materially hedge inference burn.
+\item Unlike pay-per-click (PPC), revshare pays only when intent is satisfied → reinforcing, not corrupting stochastic reasoning.
+\end{itemize}
+
+The conclusion is that: \textbf{LLMs monetise understanding, not attention.} Only revshare scales without corrupting reasoning incentives or embedding bidder capital into the recommendation layer.
+
+---
+
+\section{1. Introduction: from attention to outcomes}
+
+The web’s economic history since the early 2000s can be summarised as the rise of the attention → ad model. Platforms such as Google and Meta built systems that:
+
+\begin{itemize}[leftmargin=*]
+\item Captured user attention (search, feeds, video).
+\item Sold that attention to advertisers via auctions.
+\item Optimised for clicks and impressions as value proxies.
+\end{itemize}
+
+This treats \textbf{attention as the scarce economic resource}, mediated by bids, not reasoning quality.
+
+Structural cracks now include:
+
+\begin{itemize}[leftmargin=*]
+\item Rising CAC squeezing margins and forcing dependency on fundraising.
+\item Auction opacity and algorithmic complexity pricing out SMEs.
+\item User distrust and discovery fragmentation to social/community platforms.
+\end{itemize}
+
+LLMs, instead of ranking links, can:
+
+\begin{itemize}[leftmargin=*]
+\item Interpret messy long-form queries,
+\item Clarify constraints through questions,
+\item Compare candidates implicitly using embeddings,
+\item Call tools/APIs,
+\item Execute transactions.
+\end{itemize}
+
+Thus the question becomes:
+
+\begin{quote}
+\textbf{What business model funds multi-billion reasoning infrastructure without corrupting reasoning incentives?}
+\end{quote}
+
+---
+
+\section{2. The cracks in Google’s economic foundation}
+
+\subsection{2.1 Rising costs and fragile margins}
+
+Benchmarks show (2025):
+
+\begin{itemize}
+\item \textbf{Search CPC ≈ US\$5.26}
+\item \textbf{CPL ≈ US\$70.11}
+\item Search CPC range by sector US\$2.69–5.26
+\item Display CPC ≈ US\$0.63
+\end{itemize}
+
+All trending upward over multi-year horizon, embedding CAC into the discovery layer.
+
+\subsection{2.2 Capital as visibility gate}
+
+To test competitive verticals:
+\begin{itemize}
+\item SMEs require \textbf{US\$1k–10k/month budgets}
+\item Entrants pay \emph{before} validating conversion
+\item Incumbents defend visibility by outbidding
+\end{itemize}
+
+This results in:
+\begin{quote}
+Auction allocates visibility by capital → not reasoning fit or product merit.
+\end{quote}
+
+\subsection{2.3 Intent erosion \& behavioural shifts}
+
+\begin{itemize}
+\item Younger users use TikTok/Reddit for product discovery.
+\item Zero-click SERP reduces downstream click value.
+\item LLM chat interfaces absorb first-line commercial queries.
+\end{itemize}
+
+---
+
+\section{3. OpenAI’s economics: a very expensive brain}
+
+\subsection{3.1 Revenue growth speed}
+
+Revenue run-rate:
+
+\begin{itemize}
+\item 2023–24 ≈ US\$2–4B
+\item Dec 2024 ≈ US\$5.5B
+\item Jun 2025 ≈ US\$10B
+\item Aug 2025 ≈ US\$13B
+\end{itemize}
+
+> 2025 H1 revenue > all of 2024 → fastest scaling reasoning engine in history.
+
+\subsection{3.2 Compute costs}
+
+Reported/leaked:
+
+\begin{itemize}
+\item 2024 total compute ≈ US\$5.8B
+\item 2025 inference YTD by Q3 ≈ US\$8.67B
+\item 7+ Q Azure inference cumulative ≈ US\$12.4B+
+\end{itemize}
+
+Meaning:
+
+\begin{quote}
+A durable global reasoning substrate that is economically powerful but financially hungry.
+\end{quote}
+
+---
+
+\section{4. Why stochastic reasoning and ad auctions are incompatible}
+
+LLMs reason by:
+
+\begin{enumerate}
+\item Accepting long context windows.
+\item Encoding constraints and preferences into embeddings.
+\item Evaluating many candidates implicitly in vector space.
+\item Sampling stochastically from probability distributions.
+\item Refining intent via multi-turn questions.
+\end{enumerate}
+
+Injecting auction bids creates:
+
+\begin{itemize}
+\item Bidder bias in candidate pools,
+\item Noisy reinforcement signals,
+\item Loss of trust,
+\item Lower long-term conversion,
+\item More returns, cancellations, dissatisfaction.
+\end{itemize}
+
+By contrast:
+
+\begin{quote}
+A model paid only on completed outcomes has every incentive to optimise reasoning, not bids.
+\end{quote}
+
+---
+
+\section{5. A quantitative model of revenue per conversation}
+
+To evaluate revshare viability → model a single high-intent commercial session.
+
+\subsection{5.1 Define the scenario}
+
+Assume:
+
+\begin{quote}
+User high-intent query:\\
+\emph{“Find me a mid-range pair of running shoes under £120 for overpronation, UK size 8, delivered this week.”}
+\end{quote}
+
+The model will:
+
+\begin{itemize}
+\item Interact for several turns, clarify constraints,
+\item Call marketplace or store APIs (e.g. Shopify, Etsy),
+\item Return a shortlist with trade-offs,
+\item Execute transaction via a payments partner (e.g. Stripe),
+\item Receive revshare percentage $\tau$ from order value only \emph{on success}.
+\end{itemize}
+
+Let parameters:
+
+\begin{itemize}
+\item \textbf{AOV} = Average Order Value (USD)
+\item $\tau$ = revshare take-rate
+\item $p$ = probability of conversion from high-intent session
+\item $C_{inf}$ = marginal inference + orchestration cost/session
+\end{itemize}
+
+\subsection{5.2 Parameter assumptions}
+
+Assume conservative magnitudes:
+
+\begin{itemize}
+\item \textbf{AOV = US\$90}
+\item $\tau = 12\% = 0.12$
+\item $p = 35\% = 0.35$
+\item $C_{inf} = US\$0.05$
+\end{itemize}
+
+\subsection{5.3 Expected revenue and margins}
+
+\begin{align*}
+E[Revenue/session] &= p \times AOV \times \tau\\
+&= 0.35 \times 90 \times 0.12\\
+&\approx \textbf{US\$3.78}
+\end{align*}
+
+\begin{align*}
+E[Gross Profit/session] &= Revenue - C_{inf}\\
+&\approx 3.78 - 0.05\\
+&\approx \textbf{US\$3.73}
+\end{align*}
+
+Even if we halve conversion $p = 0.175$ → still $\approx$ US\$1.5–2.0 margin/session.
+
+\subsection{5.4 Scaling hypothesis}
+
+At 100M high-intent sessions/month:
+
+\[
+100{,}000{,}000 \times 3.73 \times 12 \approx \textbf{US\$4.48B/year}
+\]
+
+At 200M/month → ≈ US\$9B+/year gross income opportunity.
+
+Critically:
+
+\begin{quote}
+If reasoning is bad → conversion collapses → revshare income collapses → ensuring clean incentives.
+\end{quote}
+
+---
+
+\section{6. Fairness and incentive design}
+
+\subsection{6.1 Revshare vs PPC}
+
+| Model | Incentive |
+|---|---|
+| PPC | visibility by capital bids |
+| Revshare | pay on completed success only |
+
+\subsection{6.2 Small business advantage}
+
+\begin{itemize}
+\item No upfront capital required for recommendation visibility.
+\item Merchant competes by semantic fit, delivery, reviews, stock, not bids.
+\item Long-tail sellers can outrank brands if they best satisfy intent.
+\end{itemize}
+
+This implies:
+
+\begin{quote}
+\textbf{Capital allocation → Merit allocation}.
+\end{quote}
+
+\subsection{6.3 Incentive for reasoning quality}
+
+Model is incentivised to:
+
+\begin{itemize}
+\item Clarify before proposing,
+\item Avoid low-quality suggestions,
+\item Reduce cancellations, returns,
+\item Learn via reinforcement tied to satisfaction,
+\end{itemize}
+
+Thus:
+
+\begin{quote}
+\textbf{Reasoning becomes the monetised asset, not the cost sink}.
+\end{quote}
+
+---
+
+\section{7. OpenAI’s burn as economic investment}
+
+\subsection{7.1 Training as intelligence CapEx}
+
+Up-front billions in training compute ≈ analogous to intelligence infrastructure CapEx, amortisable over years.
+
+\subsection{7.2 Inference variable cost with declining unit price}
+
+Driving unit cost down:
+
+\begin{itemize}
+\item Hardware improvements (GPU/TPU, accelerators),
+\item Software optimisation (batching, quantisation, sparsity),
+\item Architecture efficiencies (MoE, distillation),
+\end{itemize}
+
+Thus revshare transforms inference burn into a margin-expanding call option on future commerce GMV.
+
+---
+
+\section{8. Forecast: from ads to agentic marketplaces}
+
+\subsection{8.1 Macro context}
+
+\begin{itemize}
+\item 2025 global advertising >US\$1T
+\item 2030 digital ads/marketing → US\$1.5T forecast
+\item 2029 entertainment/media → US\$3.5T
+\end{itemize}
+
+\subsection{8.2 Substitution + expansion}
+
+\begin{itemize}
+\item Agents compress commercial funnels,
+\item Agents unlock long-tail supply,
+\item Even 5–10% commerce capture by 2030 → GMV rivals PPC markets,
+\end{itemize}
+
+with revshare 10–15% take → sustainable flywheel.
+
+---
+
+\section{9. Conclusion}
+
+\begin{quote}
+\textbf{Search → monetises fragments of intent.}\\
+\textbf{LLMs → monetise reasoning chains.}\\
+\textbf{Auctions corrupt reasoning. Revshare reinforces it.}
+\end{quote}
+
+\textbf{Revshare is not optional — it is the only incentive-aligned sustainability model for frontier LLM economics.}
+
+---
+
+\section*{References}
+
+Cottier, M. et al. (2024) *The rising costs of training frontier AI models*, arXiv preprint.
+
+Epoch (2025a) ‘OpenAI’s revenue has been growing 3× a year since 2024’, Epoch AI. Available at: \url{https://epoch.ai/data-insights/openai-revenue}
+
+Epoch (2025b) ‘Most of OpenAI’s 2024 compute went to experiments’, Epoch AI. Available at: \url{https://epoch.ai/data-insights/openai-compute-spend}
+
+Entrepreneur (2025) ‘OpenAI saw more revenue in 6 months than all of 2024’, Entrepreneur. Available at: \url{https://www.entrepreneur.com/business-news/openai-saw-more-revenue-in-six-months-than-all-of-last-year/497774}
+
+Financial Times (2025) ‘How high are OpenAI’s compute costs? Possibly higher’, FT. Available at: \url{https://www.ft.com/content/fce77ba4-6231-4920-9e99-693a6c38e7d5}
+
+LocaliQ (2025) *Search Advertising Benchmarks 2025*, LocaliQ. Available at: \url{https://localiq.com/blog/search-advertising-benchmarks/}
+
+Reuters (2025) ‘OpenAI’s annualised revenue hits US\$10B vs 2024’, Reuters. Available at: \url{https://www.reuters.com/business/media-telecom/openais-annualised-revenue-hits-10-billion/}
+
+StoreGrowers (2025) *Google Ads Benchmarks 2025*, StoreGrowers. Available at: \url{https://www.storegrowers.com/google-ads-benchmarks/}
+
+The Register (2025) ‘OpenAI spent US\$12B+ on Azure inference’, The Register. Available at: \url{https://www.theregister.com/2025/11/12/openai_spending_report/}
+
+WARC (2025) ‘Global digital ad spend passed US\$1T’, WARC. Available at: \url{https://www.warc.com/}
+
+WordStream (2025a) *Google Ads Benchmarks 2025*, WordStream. Available at: \url{https://www.wordstream.com/blog/2025-google-ads-benchmarks}
+
+WordStream (2025b) *Google Ads Costs 2025*, WordStream. Available at: \url{https://www.wordstream.com/blog/google-ads-cost}
+
+eMarketer (2025) ‘Global Media Ad Spend Forecast 2025’, eMarketer. Available at: \url{https://www.emarketer.com/}
+
+---
+
 \end{document}
