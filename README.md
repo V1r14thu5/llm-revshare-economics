@@ -1,4 +1,4 @@
-# 📘 LLM Revshare Economics Thesis
+# LLM Revshare Economics Thesis
 
 **Unbiased reasoning cannot be auctioned — it can only be monetised on success.**
 
